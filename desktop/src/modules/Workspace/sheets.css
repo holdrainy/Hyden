@@ -1,0 +1,39 @@
+.ws-sheet { min-width: 0; color: #c7d3c1; }
+.ws-sheet-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; border: 1px solid #303b32; border-bottom: 0; padding: 12px; background: #18201b; border-radius: 8px 8px 0 0; }
+.ws-sheet-toolbar button { display: inline-flex; align-items: center; justify-content: center; background: #222e23; color: #b7c6a7; border: 1px solid #3b4936; border-radius: 4px; padding: 6px; }
+.ws-sheet-toolbar button:hover { background: #344332; }
+.ws-sheet-toolbar button:disabled { opacity: .4; cursor: not-allowed; }
+.ws-sheet-tool-group { display: flex; align-items: center; gap: 4px; }
+.ws-sheet-tool-group > span { display: inline-flex; gap: 5px; align-items: center; font-size: 10px; margin-right: 3px; color: #a1b292; }
+.ws-sheet-toolbar .ws-sheet-header-toggle { gap: 6px; font-size: 10px; padding: 6px 9px; }
+.ws-sheet-header-toggle[aria-pressed="true"] { background: #3b4b32; color: #d7e8c2; border-color: #9eb584; }
+.ws-sheet-dimensions { margin-left: auto; font-size: 9px; color: #91a184; white-space: nowrap; }
+.ws-sheet-formula-bar { display: flex; align-items: center; border: 1px solid #354233; background: #131b16; min-height: 40px; }
+.ws-sheet-address { align-self: stretch; min-width: 57px; display: grid; place-items: center; color: #c2d2ac; font-size: 11px; font-variant-numeric: tabular-nums; border-right: 1px solid #354233; }
+.ws-sheet-fx { font-family: Georgia, serif; font-style: italic; color: #879b77; margin: 0 12px; }
+.ws-sheet-formula-bar input { flex: 1; min-width: 0; background: transparent; border: 0; color: #cbdac0; outline: 0; padding: 11px 8px 11px 0; font-size: 11px; font-family: ui-monospace, monospace; }
+.ws-sheet-formula-bar:focus-within { border-color: #9bb37e; }
+.ws-sheet-formula-bar input::placeholder { color: #74866b; font-size: 10px; }
+.ws-sheet-scroll { overflow: auto; max-height: 520px; scrollbar-width: thin; scrollbar-color: #40533b #172019; border: 1px solid #303b32; border-top: 0; }
+.ws-sheet-scroll:focus-visible { outline: 2px solid #aec98d; outline-offset: 3px; }
+.ws-sheet-grid { border-collapse: separate; border-spacing: 0; table-layout: fixed; width: max-content; min-width: 100%; background: #151d19; }
+.ws-sheet-grid th, .ws-sheet-grid td { border-right: 1px solid #2b382d; border-bottom: 1px solid #2b382d; padding: 0; }
+.ws-sheet-grid td { min-width: 108px; width: 108px; }
+.ws-sheet-grid thead th { position: sticky; top: 0; z-index: 3; background: #253025; color: #97aa86; font-size: 10px; font-weight: 500; height: 30px; }
+.ws-sheet-grid tbody th { position: sticky; left: 0; z-index: 2; background: #202a22; width: 38px; min-width: 38px; color: #91a181; font-size: 9px; font-weight: 400; }
+.ws-sheet-grid th button { display: block; width: 100%; height: 29px; border: 0; padding: 0 9px; background: transparent; color: inherit; font: inherit; }
+.ws-sheet-grid th button:hover { background: #34442f; }
+.ws-sheet-grid .ws-sheet-corner { left: 0; z-index: 4; width: 38px; min-width: 38px; font-size: 17px; }
+.ws-sheet-grid td input { width: 100%; min-width: 108px; height: 34px; background: transparent; border: 0; border-radius: 0; padding: 7px 9px; font-size: 11px; color: #c4d2bc; outline: 0; text-overflow: ellipsis; }
+.ws-sheet-grid td input:focus { background: #202c20; text-overflow: clip; }
+.ws-sheet-grid td input:disabled { color: #7d8e73; }
+.ws-sheet-grid .ws-sheet-cell-selected { box-shadow: inset 0 0 0 1.5px #b5cf91; background: #233021; }
+.ws-sheet-grid .ws-sheet-coordinate-selected { background: #3b4d30; color: #d0e3b9; }
+.ws-sheet-grid .ws-sheet-header-row td { background: #293b2a; }
+.ws-sheet-header-row td input { font-weight: 650; color: #d7e7c9; }
+.ws-sheet-grid .ws-sheet-cell-error input { color: #e6ac91; }
+.ws-sheet-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 9px; background: #1a251d; color: #8c9f80; font-size: 8px; line-height: 1.6; padding: 11px 12px; border: 1px solid #303b32; border-top: 0; border-radius: 0 0 7px 7px; }
+.ws-sheet-footer code { color: #bacfa7; font-size: 9px; }
+.ws-sheet-note { color: #829379; font-size: 9px; line-height: 1.8; margin: 14px 0 0; }
+.ws-sheet-error { margin: 0; padding: 9px 12px; border: 1px solid #755440; background: #36281f; color: #edbea2; font-size: 11px; }
+@media(max-width: 600px) { .ws-sheet-toolbar { padding: 10px; gap: 9px; }.ws-sheet-dimensions { width: 100%; margin-left: 0; }.ws-sheet-grid td, .ws-sheet-grid td input { min-width: 100px; }.ws-sheet-footer { display: block; }.ws-sheet-footer > span { display: block; margin-bottom: 4px; } }

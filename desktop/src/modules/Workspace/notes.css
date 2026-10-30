@@ -1,0 +1,56 @@
+.ws-note-editor { min-width: 0; border: 1px solid #303d34; border-radius: 9px; background: #141b19; overflow: hidden; display: flex; flex-direction: column; }
+.ws-note-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; min-height: 52px; padding: 10px 13px; background: #1a231f; border-bottom: 1px solid #303b32; }
+.ws-note-formatting { display: flex; gap: 3px; align-items: center; }
+.ws-note-toolbar button { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-width: 29px; min-height: 29px; border: 1px solid transparent; border-radius: 5px; background: transparent; color: #a6b69e; padding: 6px; }
+.ws-note-toolbar button:hover { background: #2c392a; color: #d1e1bf; }
+.ws-note-toolbar button:disabled { opacity: .45; cursor: not-allowed; }
+.ws-note-view-controls { display: flex; align-items: center; gap: 2px; margin-left: auto; border: 1px solid #384634; border-radius: 5px; padding: 2px; }
+.ws-note-view-controls button { font-size: 9px; min-height: 25px; padding: 5px 7px; }
+.ws-note-view-controls button[aria-pressed="true"] { color: #d3e4bd; background: #33412e; }
+.ws-note-toolbar .ws-note-focus-toggle { border: 1px solid #384634; }
+.ws-note-panes { display: grid; min-width: 0; min-height: 390px; flex: 1; }
+.ws-note-view-split { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+.ws-note-source-pane, .ws-note-preview-pane { min-width: 0; display: flex; flex-direction: column; }
+.ws-note-view-split .ws-note-preview-pane { border-left: 1px solid #2c382f; }
+.ws-note-pane-label { color: #8c9e86; font-size: 8px; letter-spacing: 1.5px; padding: 17px 21px 0; }
+.ws-note-source-pane textarea { flex: 1; display: block; width: 100%; min-height: 355px; resize: vertical; border: 0; outline: none; background: transparent; color: #d0dcc7; padding: 18px 21px 26px; font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 12px; line-height: 1.9; tab-size: 2; }
+.ws-note-source-pane textarea::placeholder { color: #73856d; opacity: 1; }
+.ws-note-source-pane textarea:focus-visible { box-shadow: inset 0 0 0 1px #90a67a; outline-offset: -2px; }
+.ws-note-source-pane textarea:disabled { color: #87947f; }
+.ws-note-rendered { padding: 16px 23px 28px; color: #c6d2bf; font-size: 13px; line-height: 1.9; min-width: 0; overflow-wrap: anywhere; }
+.ws-note-rendered h1, .ws-note-rendered h2, .ws-note-rendered h3, .ws-note-rendered h4, .ws-note-rendered h5, .ws-note-rendered h6 { color: #e1e9d9; font-weight: 550; line-height: 1.45; margin: 18px 0 10px; letter-spacing: -.4px; }
+.ws-note-rendered > :first-child { margin-top: 0; }
+.ws-note-rendered h1 { font-size: 26px; }
+.ws-note-rendered h2 { font-size: 21px; }
+.ws-note-rendered h3 { font-size: 17px; }
+.ws-note-rendered h4, .ws-note-rendered h5, .ws-note-rendered h6 { font-size: 14px; }
+.ws-note-rendered p { white-space: pre-line; margin: 0 0 15px; }
+.ws-note-rendered strong { color: #dfe8d5; font-weight: 650; }
+.ws-note-rendered ul { list-style: disc; margin: 0 0 15px; padding-left: 21px; }
+.ws-note-rendered li { margin: 3px 0; }
+.ws-note-rendered code { padding: 2px 5px; border-radius: 4px; background: #273326; color: #c9dcb6; font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: .9em; }
+.ws-note-code-block { margin: 15px 0; border: 1px solid #344032; background: #101711; border-radius: 6px; overflow: hidden; }
+.ws-note-code-block > span { display: block; padding: 5px 12px; border-bottom: 1px solid #2b3728; font-size: 9px; color: #8da77c; }
+.ws-note-code-block pre { overflow-x: auto; padding: 13px; margin: 0; font-size: 11px; line-height: 1.75; white-space: pre; }
+.ws-note-code-block pre code { padding: 0; background: transparent; font-size: inherit; }
+.ws-note-rendered .ws-note-task-list { list-style: none; padding: 0; margin: 0 0 15px; }
+.ws-note-task-list label { display: flex; align-items: flex-start; gap: 9px; cursor: pointer; }
+.ws-note-task-list input { accent-color: #bfd6a1; width: 13px; height: 13px; margin-top: 6px; flex-shrink: 0; cursor: pointer; }
+.ws-note-task-list input:disabled { cursor: not-allowed; }
+.ws-note-task-complete { color: #8c9d80; text-decoration: line-through; }
+.ws-note-rendered .ws-note-preview-empty { color: #83947b; font-size: 12px; max-width: 310px; line-height: 1.9; }
+.ws-note-rendered .ws-note-preview-limit { color: #b7c894; font-size: 10px; background: #252f1d; border: 1px solid #475137; padding: 10px; border-radius: 5px; }
+.ws-note-editor-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 11px 15px; border-top: 1px solid #2b372c; background: #182019; color: #8b9f7d; font-size: 9px; }
+.ws-note-editor-footer > span:first-child > span { padding: 0 5px; }
+.ws-note-error { color: #e8b89c; background: #392b21; border-bottom: 1px solid #6a4d34; margin: 0; font-size: 11px; line-height: 1.7; padding: 10px 15px; }
+.ws-note-focus-heading { padding: 25px 30px 0; }
+.ws-note-focus-heading > span { color: #9eb28b; font-size: 8px; letter-spacing: 1.8px; }
+.ws-note-focus-heading h2 { color: #e0e9d6; font-size: 26px; letter-spacing: -.7px; font-weight: 500; margin: 10px 0; overflow-wrap: anywhere; }
+.ws-note-focused { position: fixed; inset: 0; z-index: 80; border: 0; border-radius: 0; overflow-y: auto; }
+.ws-note-focused .ws-note-toolbar { flex-shrink: 0; position: sticky; top: 0; z-index: 1; }
+.ws-note-focused .ws-note-panes { width: 100%; max-width: 1200px; margin: 0 auto; min-height: 0; }
+.ws-note-focused .ws-note-source-pane textarea { resize: none; min-height: 55vh; font-size: 14px; padding-top: 22px; }
+.ws-note-focused .ws-note-rendered { font-size: 15px; padding-top: 22px; }
+.ws-note-focused .ws-note-focus-heading { max-width: 1200px; width: 100%; margin: 0 auto 15px; }
+@media (max-width: 1100px) { .ws-note-view-controls span { display: none; }.ws-note-toolbar { gap: 7px; padding: 9px; }.ws-note-formatting { gap: 0; }.ws-note-toolbar button { min-width: 26px; }.ws-note-pane-label { padding-left: 15px; }.ws-note-source-pane textarea { padding-left: 15px; padding-right: 15px; font-size: 11px; }.ws-note-rendered { padding-left: 16px; padding-right: 16px; font-size: 12px; } }
+@media (max-width: 700px) { .ws-note-view-split { grid-template-columns: 1fr; }.ws-note-view-split .ws-note-preview-pane { border-left: 0; border-top: 1px solid #2c382f; }.ws-note-view-split .ws-note-source-pane textarea { min-height: 250px; }.ws-note-pane-label { font-size: 7px; }.ws-note-source-pane textarea { min-height: 320px; }.ws-note-rendered h1 { font-size: 23px; }.ws-note-editor-footer > span:last-child { display: none; }.ws-note-toolbar { gap: 5px; }.ws-note-toolbar button { min-width: 24px; padding: 5px; }.ws-note-focused .ws-note-toolbar { padding: 9px 12px; }.ws-note-focused .ws-note-view-controls span { display: inline; }.ws-note-focus-heading { padding-left: 20px; padding-right: 20px; } }

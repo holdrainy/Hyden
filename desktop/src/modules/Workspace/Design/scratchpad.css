@@ -1,0 +1,28 @@
+.scratchpad { min-width: 0; }
+.scratch-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; margin-bottom: 19px; }
+.scratch-heading h2 { font-size: 21px; font-weight: 450; color: #dce6d2; letter-spacing: -.5px; margin: 0 0 8px; }
+.scratch-heading p { font-size: 11px; line-height: 1.8; color: #9aaf8c; margin: 0; }
+.scratch-save-status { display: inline-flex; align-items: center; gap: 5px; font-size: 9px; color: #b6ce9d; white-space: nowrap; margin-top: 5px; }
+.scratch-unsaved { color: #dfbd89; }
+.scratch-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 12px; background: #1a251c; border: 1px solid #3a4c31; border-radius: 8px 8px 0 0; }
+.scratch-toolbar button { display: inline-flex; align-items: center; justify-content: center; gap: 5px; background: #222f21; border: 1px solid #3c5132; color: #bed2ac; border-radius: 5px; font-size: 10px; min-height: 30px; padding: 6px 9px; }
+.scratch-toolbar button:hover { background: #32432c; }
+.scratch-toolbar button[aria-pressed="true"] { background: #3e5233; border-color: #a2bf87; color: #e0ebd3; }
+.scratch-toolbar button:disabled { opacity: .4; cursor: not-allowed; }
+.scratch-tools, .scratch-colors, .scratch-actions { display: flex; align-items: center; gap: 5px; }
+.scratch-width, .scratch-paper { display: flex; align-items: center; gap: 6px; color: #95ab85; font-size: 9px; }
+.scratch-toolbar select { background: #142015; border: 1px solid #3e5331; color: #c3d5af; border-radius: 5px; font-size: 10px; padding: 6px; min-width: 0; }
+.scratch-toolbar .scratch-color { padding: 0; min-height: 20px; width: 20px; height: 20px; border: 2px solid #839575; border-radius: 50%; }
+.scratch-toolbar .scratch-color[aria-pressed="true"] { outline: 1px solid #e0e7d5; outline-offset: 3px; }
+.scratch-toolbar .color-293329 { background: #293329; }.scratch-toolbar .color-b64b42 { background: #b64b42; }.scratch-toolbar .color-487b9b { background: #487b9b; }.scratch-toolbar .color-8b649d { background: #8b649d; }.scratch-toolbar .color-f4f0e7 { background: #f4f0e7; }
+.scratch-actions { margin-left: auto; }.scratch-toolbar .scratch-export { background: #bed4a3; color: #24311d; border-color: #cce2b2; font-weight: 600; }
+.scratch-toolbar .scratch-export:hover { background: #d0e4b8; }
+.scratch-stage { background: #101711; padding: 18px; border: 1px solid #3a4c31; border-top: 0; border-radius: 0 0 8px 8px; min-width: 0; overflow: hidden; }
+.scratch-board { display: block; width: 100%; height: auto; touch-action: none; user-select: none; cursor: crosshair; box-shadow: 0 7px 23px #0004; overflow: hidden; }
+.scratch-board:focus-visible { outline: 2px solid #c0d4a6; outline-offset: 5px; }
+.scratch-empty { min-height: 330px; display: grid; place-items: center; text-align: center; padding: 30px; color: #a4b88f; font-size: 12px; line-height: 1.9; }
+.scratch-feedback { font-size: 11px; line-height: 1.8; padding: 12px 14px; margin-bottom: 14px; background: #233222; color: #c6d9b2; border: 1px solid #415937; border-radius: 7px; }
+.scratch-error { background: #36261f; border-color: #75513d; color: #e7b79b; }.scratch-feedback > div { display: flex; gap: 14px; margin-top: 6px; }.scratch-feedback button { background: none; border: 0; color: inherit; text-decoration: underline; padding: 0; cursor: pointer; }
+.scratch-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; color: #8da17e; font-size: 8px; line-height: 1.8; margin-top: 11px; }
+@media(max-width:1000px) { .scratch-actions { margin-left: 0; }.scratch-heading h2 { font-size: 19px; }.scratch-toolbar { gap: 10px; } }
+@media(max-width:600px) { .scratch-heading { flex-wrap: wrap; gap: 5px; }.scratch-heading h2 { font-size: 20px; }.scratch-heading p { font-size: 10px; }.scratch-save-status { font-size: 8px; }.scratch-toolbar { gap: 10px; padding: 10px; }.scratch-toolbar button { font-size: 9px; padding: 6px 8px; }.scratch-colors { gap: 7px; }.scratch-stage { padding: 10px; }.scratch-footer { font-size: 7px; }.scratch-actions { flex: 1; }.scratch-toolbar .scratch-export { margin-left: auto; } }
