@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import tauriConfig from './src-tauri/tauri.conf.json' with { type: 'json' };
 
 export default defineConfig({
+  base: '/Hyden/',
   plugins: [react(), tailwindcss()],
   clearScreen: false,
   server: {
