@@ -1,0 +1,6 @@
+.me-page { max-width: 1350px; }
+.me-heading { display: flex; justify-content: space-between; align-items: center; gap: 18px; }.me-heading .page-heading > p { margin-bottom: 25px; }
+.me-local-label { display: flex; align-items: center; gap: 7px; color: #9db78b; font-size: 10px; white-space: nowrap; }
+.me-tabs { display: flex; gap: 26px; align-items: center; border-bottom: 1px solid #354332; margin-bottom: 22px; }.me-tabs > button { display: flex; align-items: center; gap: 8px; padding: 13px 1px; color: #96aa86; border: 0; border-bottom: 2px solid transparent; background: none; font-size: 12px; }.me-tabs > button[aria-selected="true"] { color: #d0e1bc; border-bottom-color: #bad39f; }
+.me-page button:disabled, .me-page input:disabled { opacity: .5; cursor: not-allowed; }
+@media(max-width:700px) { .me-heading { display:block; }.me-local-label { margin:-10px 0 18px; font-size:9px; }.me-tabs { gap:21px; }.me-tabs > button { font-size:10px; gap:6px; } }
